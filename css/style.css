@@ -1,0 +1,72 @@
+:root {
+    --cor-primaria: black;
+    --cor-secundaria: #008000;
+    --cor-branca: #fcfcfc;
+
+    --fonte-principal: 'Roboto', sans-serif;
+
+    /*MEDIDAS*/
+    --espacamento-pequeno: 0.5rem;
+    --espacamento-medio: 1rem;
+    --espacamento-grande: 2rem;
+}
+
+/* CSS reset */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 1px dotted white;
+}
+
+body{
+    font-family: var(--fonte-principal);
+    background-color:var(--cor-primaria);
+    color: var(--cor-branca);
+    line-height: 1.6;
+    padding-top: 90px; /* evita que o conteúdo fique escondido atrás do header */
+}
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+    padding: var(--espacamento-grande) 0;
+}
+
+h1, h2,h3 {
+    font-weight: 600;
+}
+
+a{
+    text-decoration: none;
+    color: var(--cor-branca);
+}
+
+.btn{
+    padding: var(--espacamento-pequeno) var(--espacamento-medio);
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.btn-cta{
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branca);
+}
+
+header{
+    padding: var(--espacamento-medio) 0;
+    background-color:var(--cor-primaria) ;
+    border-bottom:var(--cor-secundaria) ;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.logo{
+    font-weight: 700;
+    font-size: 1.2rem;
+}
