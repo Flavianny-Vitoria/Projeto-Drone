@@ -2,29 +2,108 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/style.css">
-  <title>AgroVant</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>AgroVant</title>
 </head>
+
 <body>
 
-     <header class="cabecalho">
-    <div class="logo">
-      <a href="index.html">
-        <h1>AGROVANT</h1>
-      </a>
-    </div>
-    <nav class="menu">
-      <a href="#funcoes">Funções</a>
-      <a href="#especificacoes">Especificações</a>
-      <a href="#depoimentos">Depoimentos</a>
-      <a href="#agende" class="btn btn-cta">Agende</a>
-    </nav>
-  </header>
+    <header class="cabecalho">
 
-    
-    
+        <div class="logo">
+            <a href="index.html">
+                <h1>🌾AGROVANT🌾</h1>
+            </a>
+        </div>
+
+        <nav class="menu">
+            <a href="#funcoes">FUNÇÕES</a>
+            <a href="#especificacoes">ESPECIFICAÇÕES</a>
+            <a href="#depoimentos">DEPOIMENTOS</a>
+            <a href="#agende" class="btn btn-cta">AGENDE</a>
+        </nav>
+
+    </header>
+
+    <section class="hero">
+
+        <video autoplay muted loop class="video-fundo">
+            <source src="img/Vídeo 1.webm" type="video/webm">
+        </video>
+
+        <div class="conteudo">
+            <h1>AGROVANT</h1>
+            <p>O drone inteligente para<br>
+                silvicultura de alta performance</p>
+
+            <a href="#" class="btn btn-cta">
+                QUERO UMA DEMONSTRAÇÃO
+            </a>
+        </div>
+
+    </section>
+
+    <section class="fucoes">
+
+        <img src="img/Imagem 2.png" class="imagem-drone" alt="Drone agrícola">
+
+
+        <div class="funcoes-conteudo">
+
+            <h2>
+                Monitore e aplique defensivos agrícolas com<br>
+                precisão, economia e segurança ambiental.
+            </h2>
+
+            <div class="beneficios">
+                <span>🚁 Rápido</span>
+
+                <span>📡 Inteligente</span>
+
+                <span>🌱 Sustentável</span>
+
+            </div>
+
+            <p class="chamada">
+               👉 Agende uma demonstração gratuita na sua fazenda!
+            </p>
+
+            <div class="botoes">
+                <button class="btn-video" onclick="abrirVideo()">
+                    Assistir vídeo ▶
+                </button>
+
+                <a href="#reportagem" class="btn-reportagem">
+                    Reportagem
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- JANELA DO VÍDEO -->
+    <div id="modal-video" class="modal-video">
+
+        <div class="video-container">
+
+            <button class="fechar" onclick="fecharVideo()">✕</button>
+
+            <video id="meu-video" controls>
+                <source src="img/Vídeo 2.webm" type="video/webm">
+                Seu navegador não suporta vídeos.
+            </video>
+
+        </div>
+
+    </div>
+
+    <script src="js/script.js"></script>
+
 </body>
+
 </html>

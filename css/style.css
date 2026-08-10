@@ -1,72 +1,364 @@
 :root {
     --cor-primaria: black;
-    --cor-secundaria: #008000;
+    --cor-secundaria: #00a859;
     --cor-branca: #fcfcfc;
 
     --fonte-principal: 'Roboto', sans-serif;
 
-    /*MEDIDAS*/
+    /* MEDIDAS */
     --espacamento-pequeno: 0.5rem;
     --espacamento-medio: 1rem;
     --espacamento-grande: 2rem;
 }
 
-/* CSS reset */
-*{
+
+/* CSS RESET */
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    border: 1px dotted white;
 }
 
-body{
+
+body {
     font-family: var(--fonte-principal);
-    background-color:var(--cor-primaria);
+    background-color: var(--cor-primaria);
     color: var(--cor-branca);
     line-height: 1.6;
-    padding-top: 90px; /* evita que o conteúdo fique escondido atrás do header */
 }
 
-.container{
-    width: 100%;
-    margin: 0 auto;
-    padding: var(--espacamento-grande) 0;
-}
 
-h1, h2,h3 {
-    font-weight: 600;
-}
-
-a{
+/* LINKS */
+a {
     text-decoration: none;
     color: var(--cor-branca);
 }
 
-.btn{
+
+/* BOTÕES */
+.btn {
     padding: var(--espacamento-pequeno) var(--espacamento-medio);
-    border-radius: 4px;
+    border-radius: 7px;
     font-weight: 500;
 }
 
-.btn-cta{
+
+/* BOTÃO AGENDE */
+.btn-cta {
     background-color: var(--cor-secundaria);
     color: var(--cor-branca);
 }
 
-header{
-    padding: var(--espacamento-medio) 0;
-    background-color:var(--cor-primaria) ;
-    border-bottom:var(--cor-secundaria) ;
-}
 
-.container{
+/* CABEÇALHO */
+.cabecalho {
+    width: 100%;
+    height: 63px;
+
+    padding: 0 36px;
+
+    background-color: var(--cor-primaria);
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row;
+
+    position: relative;
+    z-index: 10;
 }
 
-.logo{
+
+/* LOGO */
+.logo h1 {
+    font-size: 1.5rem;
     font-weight: 700;
-    font-size: 1.2rem;
+}
+
+
+/* MENU */
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+
+/* LINKS DO MENU */
+.menu a {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+
+/* EFEITO AO PASSAR O MOUSE */
+.menu a:hover {
+    opacity: 0.8;
+}
+
+
+/* BOTÃO AGENDE */
+.menu .btn-cta {
+    padding: 9px 14px;
+    font-weight: 400;
+}
+
+.hero {
+    position: relative;
+    height: calc(100vh - 63px);
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+
+
+/* VÍDEO NO FUNDO */
+.video-fundo {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: 0;
+}
+
+
+
+/* BENEFÍCIOS */
+
+.beneficios {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    font-size: 28px;
+
+    margin-bottom: 30px;
+}
+
+
+/* FRASE */
+
+.chamada {
+    font-size: 18px;
+
+    margin-bottom: 35px;
+}
+
+
+/* BOTÕES */
+
+.botoes {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 35px;
+}
+
+
+/* BOTÃO VÍDEO */
+
+.btn-video {
+    background-color: white;
+
+    color: black;
+
+    border: none;
+
+    padding: 9px 15px;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+
+
+/* CONTEÚDO */
+
+.funcoes-conteudo {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* TÍTULO */
+
+.funcoes h2 {
+    font-size: 30px;
+    line-height: 1.25;
+    margin-bottom: 25px;
+    color: #edefed;
+}
+
+
+/* BENEFÍCIOS */
+
+.beneficios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+
+    font-size: 28px;
+
+    margin-bottom: 28px;
+}
+
+
+/* CHAMADA */
+
+.chamada {
+    font-size: 18px;
+
+    margin-bottom: 40px;
+}
+
+
+/* BOTÕES */
+
+.botoes {
+    display: flex;
+    justify-content: center;
+
+    gap: 35px;
+}
+
+
+/* BOTÃO VÍDEO */
+
+.btn-video {
+    background-color: rgb(11, 174, 27);
+
+    color:rgb(246, 246, 246);
+
+    border: none;
+
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+
+/* BOTÃO REPORTAGEM */
+
+.btn-reportagem {
+    color: rgb(57, 249, 4);
+
+    border: 1px solid white;
+
+    padding: 8px 25px;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+
+    text-decoration: none;
+}
+
+/* EFEITO */
+
+.btn-video:hover,
+.btn-reportagem:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+   DRONE
+========================= */
+
+.drone {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    margin-top: 40px;
+}
+
+.drone img {
+    width: 100%;
+    max-width: 1100px;
+
+    display: block;
+}
+
+/* =========================
+   MODAL DO VÍDEO
+========================= */
+
+.modal-video {
+    display: none;
+
+    position: fixed;
+
+    z-index: 999;
+
+    inset: 0;
+
+    background-color: rgba(0, 0, 0, 0.85);
+
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* QUANDO ABRIR */
+
+.modal-video.ativo {
+    display: flex;
+}
+
+
+.video-container {
+    position: relative;
+
+    width: 80%;
+    max-width: 900px;
+}
+
+
+.video-container video {
+    width: 100%;
+
+    display: block;
+
+    border-radius: 8px;
+}
+
+
+.fechar {
+    position: absolute;
+
+    top: -40px;
+    right: 0;
+
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
 }
